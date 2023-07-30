@@ -11,7 +11,7 @@ String classificacao(double resultado) {
   } else if (resultado >= 25 && resultado < 30) {
     return "Esta engordando, fazer exercicio e fechar a boca!";
   } else if (resultado >= 30 && resultado < 35) {
-    return "Obesidade grauI, pode parar que vai dar problema!";
+    return "Obesidade grau I, pode parar que vai dar problema!";
   } else if (resultado >= 35 && resultado < 40) {
     return "Obesidade grau II, pode correr pra o hospital!";
   } else {

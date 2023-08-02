@@ -3,21 +3,27 @@ import 'models/console.dart';
 import 'models/tabela_classificacao.dart';
 
 void appImc() {
-  print('Bora ver seu IMC');
+  try {
+    print('Bora ver seu IMC');
 
-  var nome = lerConsole('Digite seu nome: ');
-  var peso = double.parse(lerConsole('Digite seu peso: '));
-  var altura = double.parse(lerConsole('Digite sua altura: '));
+    var nome = lerConsole('Digite seu nome: ').toString();
+    var peso = double.parse(lerConsole('Digite seu peso: '));
+    var altura = double.parse(lerConsole('Digite sua altura: '));
 
-  Pessoa pessoa = Pessoa(nome, peso, altura);
+    Pessoa pessoa = Pessoa(nome, peso, altura);
 
 //Variavel que armazena o metodo calcularIMC do objeto Pessoa
-  var resultado = pessoa.calcularIMC();
-  print('O IMC de ${pessoa.nome} é ${resultado.toStringAsFixed(2)}');
+    var resultado = pessoa.calcularIMC();
+    print('O IMC de ${pessoa.nome} é ${resultado.toStringAsFixed(2)}');
 
 //Variavel que armazena a funcao classificacao que recebe como parametro a variavel resultado
-  String frase = classificacao(resultado);
-  print(frase);
+    String frase = classificacao(resultado);
+    print(frase);
+  } on FormatException {
+    print("digite corretamente");
+  } catch (e) {
+    print("erro, tente novamente");
+  }
 }
   
 //criar classe pessoa OK

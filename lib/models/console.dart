@@ -1,14 +1,8 @@
 import 'dart:io';
 
-String lerConsole(String texto) {
-  String input;
-  do {
-    stdout.write(texto);
-    input = stdin.readLineSync()!;
-    if (input == "0") {
-      print("Digite um valor diferente de zero");
-    }
-  } while (input == "0");
+lerConsole(String texto) {
+  stdout.write(texto);
+  var input = stdin.readLineSync()!;
 
   return input;
 }

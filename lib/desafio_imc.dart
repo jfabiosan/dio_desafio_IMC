@@ -16,27 +16,27 @@ void appImc() {
     }
   } while (nome.length <= 2);
 
-  bool pesoTrue = true;
-  while (pesoTrue) {
+  bool pesoTrue = false;
+  while (!pesoTrue) {
     try {
       peso = double.parse(lerConsole('Digite seu peso: '));
-      pesoTrue = false;
+      pesoTrue = true;
     } on FormatException {
       print("Digite um valor válido para seu peso");
     }
   }
-  bool alturaTrue = true;
-  while (alturaTrue) {
+  bool alturaTrue = false;
+  while (!alturaTrue) {
     try {
       altura = double.parse(lerConsole('Digite sua altura: '));
-      alturaTrue = false;
+      alturaTrue = true;
     } on FormatException {
       print("Digite um valor válido para sua altura");
     }
   }
   Pessoa pessoa = Pessoa(nome, peso, altura);
 
-//Variavel que armazena o metodo calcularIMC do objeto Pessoa
+//Variavel que armazena a função calcularIMC do objeto Pessoa
   var resultado = pessoa.calcularIMC();
   print('O IMC de ${pessoa.nome} é ${resultado.toStringAsFixed(2)}');
 

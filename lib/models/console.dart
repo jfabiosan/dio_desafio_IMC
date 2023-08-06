@@ -5,14 +5,8 @@ lerConsole(String texto) {
   do {
     stdout.write(texto);
     input = stdin.readLineSync()!.trim();
-    try {
-      if (input == "0" || input.isEmpty) {
-        print("Valor nao pode ser 'ZERO'ou 'VAZIO'!");
-      }
-    } on FormatException {
-      print("digite um valor valido");
-    } catch (e) {
-      print("erro, tente novamente!!");
+    if (input == "0" || input.isEmpty) {
+      print("Valor nao pode ser 'ZERO'ou 'VAZIO'!");
     }
   } while (input == "0" || input.isEmpty);
 

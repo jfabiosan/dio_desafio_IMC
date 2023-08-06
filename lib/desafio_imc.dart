@@ -5,15 +5,9 @@ import 'models/tabela_classificacao.dart';
 void appImc() {
   print('Bora ver seu IMC');
 
-<<<<<<< HEAD
-  var nome = lerConsole('Digite seu nome: ').toString();
-  var peso = double.parse(lerConsole('Digite seu peso: '));
-  var altura = double.parse(lerConsole('Digite sua altura: '));
-=======
   String nome;
   late double peso;
   late double altura;
->>>>>>> implementsExceptions
 
   do {
     nome = lerConsole('Digite seu nome: ').toString();
